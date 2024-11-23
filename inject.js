@@ -86,7 +86,7 @@ window.addEventListener("load", async () => {
       htmlElement.classList.add("uk-theme-zinc");
     </script>
     
-    <link rel="stylesheet" href="/highlight.css">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/CoolCoderSJ/portable-console/refs/heads/main/highlight.css">
     `;
 
     iframeContent.body.innerHTML = `
