@@ -14,7 +14,7 @@ A lightweight, embeddable console tool for debugging JavaScript when DevTools ar
 ## Installation
 Add the following script to your HTML page:
 ```html
-<script src="https://url.shuchir.dev/portable-console.js"></script>
+<script src="https://console.shuchir.dev/inject.js"></script>
 ```
 
 ## Usage
