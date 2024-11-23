@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portable Console Demo</title>
+        <link rel="stylesheet" href="https://unpkg.com/franken-ui/dist/css/core.min.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="/inject.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="https://unpkg.com/franken-ui/dist/js/core.iife.js"></script>
+    </head>
+
+    <body class="p-12">
+        <h1 class="text-4xl font-bold">Try out the console!</h1>
+        <h3 class="text-2xl pl-[1px] pt-2">Hit the button in the bottom right corner to open the console.</h3>
+
+        <p class="text-xl pt-6">Add the following line to your <code>&lt;head&gt;</code> to inject portable console:</p>
+        <pre class="mt-4" style="display: flex; align-items: center; gap: 12px;"><code>&lt;script src="https://url.shuchir.dev/portable-console.js"&gt;&lt;/script&gt;</code> <button onclick="navigator.clipboard.writeText(`<script src='https://url.shuchir.dev/portable-console.js'></script>`); UIkit.notification('Copied!');" class="items-center justify-center w-[40px] h-[40px]" style="display: flex; font-size: 1.5rem;"><ion-icon name="copy-outline"></ion-icon></button></pre>
+
+        <h3 class="text-2xl pt-6 font-bold">Usage</h3>
+        <p class="text-xl pt-2">Portable console hooks into the native console functions, so no additional work is necessary. Once you add the script reference, you can continue to use console.log, etc. as usual.</p>
+
+        <h3 class="text-2xl pt-6 font-bold">Why?</h3>
+        <p class="text-xl pt-2">Portable console is meant for scenarios where you aren't able to access the dev tools window. This could be because you're on an iPad, a locked down chromebook, etc. It allows users to debug their JS code easily.</p>
+
+        <h3 class="text-2xl pt-6 font-bold">In the future...</h3>
+        <p class="text-xl pt-2">More features such as the elements tab, etc. are planned for the future.</p>
+
+        <script>
+            window.addEventListener("load", () => {
+                setTimeout(() => {
+                    console.log('Hello, world!');
+                    console.warn('This is a warning!');
+                    console.error('This is an error!');
+                }, 1000)
+                hljs.highlightAll();
+            });
+        </script>
+    </body>
+</html>
